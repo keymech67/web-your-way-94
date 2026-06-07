@@ -5,6 +5,7 @@ import { Videos } from "@/components/site/Videos";
 import { About } from "@/components/site/About";
 import { Setup } from "@/components/site/Setup";
 import { Join, Footer } from "@/components/site/Join";
+import { CursorGlow, PixelRain } from "@/components/site/Effects";
 
 export const Route = createFileRoute("/")({
   head: () => ({

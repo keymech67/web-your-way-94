@@ -1,11 +1,14 @@
 import keyboard from "@/assets/keyboard.jpg";
+import { useReveal } from "@/hooks/use-reveal";
 
 export function About() {
+  const left = useReveal<HTMLDivElement>(0.25);
+  const right = useReveal<HTMLDivElement>(0.25);
   return (
     <section id="about" className="relative overflow-hidden py-24 sm:py-32">
       <div className="absolute inset-0 -z-10 pixel-grid-bg opacity-30" />
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
-        <div className="relative">
+        <div ref={left.ref} className={`relative ${left.shown ? "reveal-in" : "reveal"}`}>
           <div className="absolute -inset-4 rounded-sm bg-gradient-to-br from-creeper/30 to-diamond/30 blur-2xl" />
           <div className="relative overflow-hidden rounded-sm border border-border pixel-shadow">
             <img
@@ -23,7 +26,7 @@ export function About() {
           </div>
         </div>
 
-        <div>
+        <div ref={right.ref} className={right.shown ? "reveal-in" : "reveal"} style={{ animationDelay: "150ms" }}>
           <div className="font-display text-[10px] text-diamond">// ABOUT THE CHANNEL</div>
           <h2 className="mt-3 font-display text-3xl sm:text-5xl">
             MINECRAFT.<br />
