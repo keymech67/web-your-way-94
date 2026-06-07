@@ -147,6 +147,83 @@
   will-change: transform;
 }
 
+/* Cursor block trail */
+@keyframes cursor-fall {
+  0% { opacity: 0.9; transform: translate(-50%, -50%) rotate(0); }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) rotate(var(--rot)); }
+}
+.cursor-block {
+  position: fixed;
+  border-radius: 2px;
+  pointer-events: none;
+  box-shadow: 0 0 12px currentColor;
+  animation: cursor-fall 0.9s ease-out forwards;
+}
+
+/* Click burst */
+@keyframes burst {
+  0% { opacity: 1; transform: translate(-50%, -50%) rotate(0) scale(1); }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) rotate(var(--rot)) scale(0.3); }
+}
+.burst-layer {
+  position: fixed;
+  pointer-events: none;
+  z-index: 65;
+}
+.burst-block {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 10px currentColor;
+  animation: burst 0.8s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+
+/* 3D rotating Minecraft block */
+@keyframes cube-spin {
+  0% { transform: rotateX(-20deg) rotateY(0deg); }
+  100% { transform: rotateX(-20deg) rotateY(360deg); }
+}
+.block-stage {
+  width: 120px;
+  height: 120px;
+  perspective: 600px;
+  display: grid;
+  place-items: center;
+}
+.block-cube {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform-style: preserve-3d;
+  animation: cube-spin 14s linear infinite;
+}
+.cube-face {
+  position: absolute;
+  inset: 0;
+  border: 2px solid oklch(0 0 0 / 0.35);
+  box-shadow: inset 0 0 18px oklch(0 0 0 / 0.4);
+  background-size: 20px 20px;
+  background-image:
+    linear-gradient(oklch(0 0 0 / 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0 0 0 / 0.18) 1px, transparent 1px),
+    linear-gradient(135deg, var(--creeper), oklch(0.55 0.2 145));
+}
+.cube-top { background-image:
+  linear-gradient(oklch(0 0 0 / 0.18) 1px, transparent 1px),
+  linear-gradient(90deg, oklch(0 0 0 / 0.18) 1px, transparent 1px),
+  linear-gradient(135deg, oklch(0.85 0.18 142), oklch(0.7 0.2 145));
+  background-size: 20px 20px; }
+.cube-bottom { background-image:
+  linear-gradient(135deg, oklch(0.3 0.05 50), oklch(0.2 0.04 50));
+  background-size: 20px 20px; }
+.cube-front  { transform: translateZ(40px); }
+.cube-back   { transform: rotateY(180deg) translateZ(40px); }
+.cube-right  { transform: rotateY(90deg)  translateZ(40px); }
+.cube-left   { transform: rotateY(-90deg) translateZ(40px); }
+.cube-top    { transform: rotateX(90deg)  translateZ(40px); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(40px); }
+
 @utility animate-float {
   animation: float-slow 4s ease-in-out infinite;
 }
