@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import hero from "@/assets/hero-minecraft.jpg";
 import { useCountUp, useReveal } from "@/hooks/use-reveal";
+import { MagneticButton, RotatingBlock, Typewriter } from "@/components/site/Effects";
 
 function Stat({ target, suffix = "", label }: { target: number; suffix?: string; label: string }) {
   const { ref, shown } = useReveal<HTMLDivElement>(0.4);
