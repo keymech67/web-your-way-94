@@ -5,7 +5,7 @@ import { Videos } from "@/components/site/Videos";
 import { About } from "@/components/site/About";
 import { Setup } from "@/components/site/Setup";
 import { Join, Footer } from "@/components/site/Join";
-import { CursorGlow, PixelRain } from "@/components/site/Effects";
+import { CursorFX, ClickFX, ScrollProgress, ParticleNetwork } from "@/components/site/Effects";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,8 +38,10 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="relative min-h-screen bg-background text-foreground">
-      <PixelRain />
-      <CursorGlow />
+      <ScrollProgress />
+      <ParticleNetwork />
+      <CursorFX />
+      <ClickFX />
       <Nav />
       <main>
         <Hero />
