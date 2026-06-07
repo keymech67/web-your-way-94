@@ -82,7 +82,9 @@ export function Hero() {
           <h1 className="font-display text-4xl leading-[1.15] text-foreground text-glow-creeper sm:text-6xl lg:text-7xl">
             <span className="inline-block animate-block-pop" style={{ animationDelay: "0.05s" }}>CRAFT.</span><br />
             <span className="inline-block animate-block-pop" style={{ animationDelay: "0.2s" }}>CLICK.</span><br />
-            <span className="inline-block text-creeper animate-block-pop" style={{ animationDelay: "0.35s" }}>CONQUER.</span>
+            <span className="inline-block text-creeper animate-block-pop" style={{ animationDelay: "0.35s" }}>
+              <Typewriter words={["CONQUER.", "MINE.", "BUILD.", "SURVIVE."]} />
+            </span>
           </h1>
 
           <p className="mt-8 max-w-xl text-base text-muted-foreground sm:text-lg animate-fade-in" style={{ animationDelay: "0.6s" }}>
@@ -90,21 +92,21 @@ export function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-in" style={{ animationDelay: "0.75s" }}>
-            <a
+            <MagneticButton
               href="https://youtube.com/@mechanical_keyboard_op"
               target="_blank"
               rel="noreferrer"
-              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-sm bg-gradient-to-r from-creeper to-creeper/80 px-7 py-4 font-display text-xs text-primary-foreground pixel-shadow transition-all hover:-translate-y-0.5 hover:translate-x-0.5 hover:shadow-[6px_6px_0_oklch(0_0_0/0.4)]"
             >
-              <span className="relative z-10">▶ WATCH ON YOUTUBE</span>
-              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-            </a>
-            <a
-              href="#videos"
-              className="inline-flex items-center gap-2 rounded-sm border border-border bg-card/60 px-7 py-4 font-display text-xs backdrop-blur transition-colors hover:bg-card"
-            >
-              EXPLORE BUILDS
-            </a>
+              <span className="group relative inline-flex items-center gap-3 overflow-hidden rounded-sm bg-gradient-to-r from-creeper to-creeper/80 px-7 py-4 font-display text-xs text-primary-foreground pixel-shadow transition-shadow hover:shadow-[6px_6px_0_oklch(0_0_0/0.4)]">
+                <span className="relative z-10">▶ WATCH ON YOUTUBE</span>
+                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+              </span>
+            </MagneticButton>
+            <MagneticButton href="#videos">
+              <span className="inline-flex items-center gap-2 rounded-sm border border-border bg-card/60 px-7 py-4 font-display text-xs backdrop-blur transition-colors hover:bg-card">
+                EXPLORE BUILDS
+              </span>
+            </MagneticButton>
           </div>
 
           <div className="mt-16 grid max-w-lg grid-cols-3 gap-6">
@@ -113,6 +115,11 @@ export function Hero() {
             <Stat target={80} label="Videos" />
           </div>
         </div>
+      </div>
+
+      {/* Rotating 3D block in corner */}
+      <div className="pointer-events-none absolute right-6 top-24 hidden sm:block">
+        <RotatingBlock />
       </div>
 
       <div className="pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-display text-muted-foreground animate-float">
