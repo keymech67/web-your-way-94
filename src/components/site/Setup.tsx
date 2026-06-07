@@ -1,10 +1,10 @@
 const gear = [
-  { cat: "BOARD", name: "Mode Sonnet 65%", desc: "Brass plate, gasket mount", color: "creeper" },
-  { cat: "SWITCHES", name: "Gateron Oil Kings", desc: "Linear, 55g actuation", color: "diamond" },
-  { cat: "KEYCAPS", name: "GMK Striker", desc: "Doubleshot ABS cherry profile", color: "gold" },
-  { cat: "MOUSE", name: "Logitech G Pro X", desc: "Lightweight, wireless", color: "redstone" },
-  { cat: "DISPLAY", name: "LG 27GP950 4K", desc: "144Hz nano IPS", color: "accent" },
-  { cat: "PC", name: "Custom RTX 4080", desc: "Ryzen 9 7950X3D", color: "creeper" },
+  { cat: "BOARD", name: "EvoFox Katana S Mini", desc: "Compact gaming layout", color: "creeper" },
+  { cat: "SWITCHES", name: "Red Switches", desc: "Linear, smooth & quiet", color: "diamond" },
+  { cat: "KEYCAPS", name: "Anti-Ghosting Caps", desc: "Every key registers, no drops", color: "gold" },
+  { cat: "MOUSE", name: "Protonix", desc: "Daily driver, dialed in", color: "redstone" },
+  { cat: "LAPTOP", name: "HP Laptop", desc: "Intel Celeron · 4GB RAM", color: "accent" },
+  { cat: "GPU", name: "Intel Integrated", desc: "Proof you don't need a beast PC", color: "creeper" },
 ];
 
 export function Setup() {
