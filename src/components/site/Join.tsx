@@ -14,7 +14,7 @@ export function Join() {
           <span className="text-creeper">BUILD?</span>
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground">
-          New videos every Friday. Insane builds, satisfying clacks, zero filler. Hit subscribe and join 120K+ crafters already in the fam.
+          New Minecraft video every day at 9PM GMT. Gameplay, tips, builds — zero filler. Subscribe and link up in Discord.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
@@ -26,12 +26,12 @@ export function Join() {
             ▶ SUBSCRIBE NOW
           </a>
           <a
-            href="https://discord.com"
+            href="https://discord.com/users/keymech_"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-sm border border-border bg-card px-8 py-4 font-display text-xs transition-colors hover:bg-secondary"
           >
-            JOIN DISCORD
+            DISCORD · KEYMECH_
           </a>
         </div>
       </div>

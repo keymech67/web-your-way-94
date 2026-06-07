@@ -25,7 +25,7 @@ export function Hero() {
         <div className="max-w-3xl">
           <div className="mb-6 inline-flex items-center gap-2 rounded-sm border border-creeper/40 bg-creeper/10 px-3 py-1.5 text-xs animate-block-pop">
             <span className="h-2 w-2 animate-pulse rounded-full bg-creeper" />
-            <span className="font-display text-[10px] text-creeper">LIVE BUILDING</span>
+            <span className="font-display text-[10px] text-creeper">NEW VIDEO DAILY · 9PM GMT</span>
           </div>
 
           <h1 className="font-display text-4xl leading-[1.15] text-foreground text-glow-creeper sm:text-6xl lg:text-7xl animate-block-pop" style={{ animationDelay: "0.1s" }}>
@@ -35,7 +35,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-8 max-w-xl text-base text-muted-foreground sm:text-lg animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            Welcome to <span className="text-foreground font-semibold">@mechanical_keyboard_op</span> — the YouTube channel where mechanical keyboards meet Minecraft mayhem. Insane builds, satisfying clacks, and pixel-perfect chaos.
+            Welcome to <span className="text-foreground font-semibold">@mechanical_keyboard_op</span> — your daily dose of Minecraft gameplay, builds, and pro tips. New video every day at 9PM GMT.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
@@ -58,9 +58,9 @@ export function Hero() {
           {/* Stats */}
           <div className="mt-16 grid max-w-lg grid-cols-3 gap-6 animate-fade-in" style={{ animationDelay: "0.8s" }}>
             {[
-              { v: "120K+", l: "Subscribers" },
-              { v: "8M+", l: "Views" },
-              { v: "200+", l: "Videos" },
+              { v: "201", l: "Subscribers" },
+              { v: "26K", l: "Views" },
+              { v: "80", l: "Videos" },
             ].map((s) => (
               <div key={s.l} className="rounded-sm border border-border/60 bg-card/40 p-4 backdrop-blur transition-all hover:border-creeper/60 hover:bg-card">
                 <div className="font-display text-lg text-creeper">{s.v}</div>

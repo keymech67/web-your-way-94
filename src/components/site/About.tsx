@@ -26,19 +26,19 @@ export function About() {
         <div>
           <div className="font-display text-[10px] text-diamond">// ABOUT THE CHANNEL</div>
           <h2 className="mt-3 font-display text-3xl sm:text-5xl">
-            TWO LOVES.<br />
-            <span className="text-diamond">ONE CHANNEL.</span>
+            MINECRAFT.<br />
+            <span className="text-diamond">EVERY DAY.</span>
           </h2>
           <p className="mt-6 text-muted-foreground">
-            I'm the creator behind <span className="text-foreground">@mechanical_keyboard_op</span> — a place where the satisfying thock of premium switches meets the endless creativity of Minecraft. From building working redstone CPUs to reviewing the latest custom keycap sets, every video is crafted with obsession.
+            I'm the creator behind <span className="text-foreground">@mechanical_keyboard_op</span> — a Minecraft channel built for players who want to actually get better. Gameplay, builds, and bite-sized tips that you can use the same day. New upload every day at <span className="text-foreground">9PM GMT</span>, no exceptions.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {[
-              { t: "Redstone Engineering", d: "Working machines, hidden bases, automated farms." },
-              { t: "Hardcore Survival", d: "100-day challenges with permanent death stakes." },
-              { t: "Keyboard Reviews", d: "Switches, keycaps, custom builds, and sound tests." },
-              { t: "Setup Tours", d: "The gear that powers the grind, fully broken down." },
+              { t: "Daily Gameplay", d: "Survival sessions, challenges, and raw runs." },
+              { t: "Pro Tips", d: "Quick tricks to level up your game fast." },
+              { t: "Cool Builds", d: "From starter bases to giant megastructures." },
+              { t: "Community", d: "Hop into Discord and craft with the crew." },
             ].map((f) => (
               <div key={f.t} className="rounded-sm border border-border bg-card/60 p-4 transition-colors hover:border-creeper/60">
                 <div className="font-display text-[11px] text-creeper">{f.t}</div>
