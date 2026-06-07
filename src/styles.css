@@ -105,6 +105,47 @@
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
+@keyframes pixel-rain {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { transform: translateY(110vh) rotate(180deg); opacity: 0; }
+}
+@keyframes reveal-up {
+  0% { opacity: 0; transform: translateY(28px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.pixel-rain-block {
+  position: absolute;
+  top: -10vh;
+  border-radius: 2px;
+  box-shadow: 0 0 12px currentColor;
+  opacity: 0.5;
+  animation-name: pixel-rain;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.reveal { opacity: 0; }
+.reveal-in { animation: reveal-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out;
+  will-change: transform;
+}
+.tilt-card:hover { transition: transform 0.05s linear; }
+.tilt-inner { transform: translateZ(30px); }
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
 
 @utility animate-float {
   animation: float-slow 4s ease-in-out infinite;
